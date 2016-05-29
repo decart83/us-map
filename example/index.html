@@ -16,15 +16,15 @@
 	
 	<script src="../lib/raphael.js"></script>
 	<!-- <script src="scale.raphael.js"></script> -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 	<script src="color.jquery.js"></script>
-	<script src="../us-map.js"></script>
+	<script src="../jquery.usmap.js"></script>
 	
 	<script>
 	$(document).ready(function() {
 	  $('#map').usmap({
 	    'stateSpecificStyles': {
-	      'AK' : {fill: '#f00'}
+	      'States': {fill: '#f00'}
 	    },
 	    'stateSpecificHoverStyles': {
 	      'HI' : {fill: '#ff0'}
@@ -39,7 +39,7 @@
 	    
 	    'click' : function(event, data) {
 	      $('#alert')
-	        .text('Click '+data.name+' on map 1')
+	        .text('Clicked '+data.name+' on map 1')
 	        .stop()
 	        .css('backgroundColor', '#ff0')
 	        .animate({backgroundColor: '#ddd'}, 1000);
@@ -58,7 +58,7 @@
 	    
 	    'click' : function(event, data) {
 	      $('#alert')
-	        .text('Click '+data.name+' on map 2')
+	        .text('Clicked '+data.name+' on map 2')
 	        .stop()
 	        .css('backgroundColor', '#af0')
 	        .animate({backgroundColor: '#ddd'}, 1000);
@@ -76,7 +76,7 @@
 	</script>
 </head>
 <body>
-  <div id="alert">Click alerts</div>
+  <div id="alert">You have not clicked a state yet.</div>
   
   <div id="map" style="width: 930px; height: 630px; border: solid 3px red;"></div>
   
